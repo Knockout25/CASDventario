@@ -2,7 +2,7 @@ function Input({ text, type, id }) {
   return (
     <div className="relative inline-block">
       <input
-        className="w-full peer p-2 rounded-md border border-gray-600 text-sm text-gray-600 outline-none focus:border-2 focus:border-cyan-600"
+        className="w-full peer p-2 rounded-md border border-gray-600 text-sm outline-none focus:border-2 focus:border-cyan-600 placeholder:text-gray-600"
         id={id}
         type={type}
         placeholder=""
