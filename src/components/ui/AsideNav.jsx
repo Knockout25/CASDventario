@@ -1,6 +1,5 @@
 import LogotypeBlack from '../../assets/casdventario-black-logotype.svg';
-import ToggleButton from './ToggleButton';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   CirclesFourIcon,
   PackageIcon,
@@ -8,16 +7,20 @@ import {
   NotebookIcon,
   UserIcon,
   GearIcon,
-  SunIcon,
-  MoonIcon,
-  ToggleLeftIcon,
   BellIcon,
   UsersIcon,
 } from '@phosphor-icons/react';
-import { useState } from 'react';
+import ToggleDarkMode from '../ToggleDarkMode';
 
 export default function AsideNav() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const getLinkClass = ({
+    isActive,
+  }) => `flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out 
+  ${
+    isActive
+      ? 'bg-cyan-600/15 text-cyan-800'
+      : 'hover:bg-cyan-600/15 active:text-cyan-800'
+  }`;
 
   return (
     <aside className="flex flex-col shrink-0 w-1/6 h-full border-r bg-white border-gray-600">
@@ -32,76 +35,49 @@ export default function AsideNav() {
         <div>
           <p className="text-xs text-gray-500">Administrador</p>
           <div className="space-y-2">
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <CirclesFourIcon size={20} weight="bold" />
+            <NavLink to={'/login'} className={getLinkClass}>
+              <CirclesFourIcon size={20} weight="regular" />
               <p className="font-medium">Dashboard</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <UsersIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/usermanagement'} className={getLinkClass}>
+              <UsersIcon size={20} weight="regular" />
               <p className="font-medium">Usuários</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <PackageIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/login'} className={getLinkClass}>
+              <PackageIcon size={20} weight="regular" />
               <p>Remessas</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <BookIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/login'} className={getLinkClass}>
+              <BookIcon size={20} weight="regular" />
               <p>Livros</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <NotebookIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/login'} className={getLinkClass}>
+              <NotebookIcon size={20} weight="regular" />
               <p>Notebooks</p>
-            </Link>
+            </NavLink>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-gray-600" />
+        <div className="w-full h-px bg-gray-600" />
         <div>
           <p className="text-xs text-gray-500">Configurações</p>
           <div className="space-y-2">
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <UserIcon size={20} weight="bold" />
+            <NavLink to={'/login'} className={getLinkClass}>
+              <UserIcon size={20} weight="regular" />
               <p>Perfil</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <BellIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/login'} className={getLinkClass}>
+              <BellIcon size={20} weight="regular" />
               <p>Notificações</p>
-            </Link>
-            <Link
-              to={''}
-              className="flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800"
-            >
-              <GearIcon size={20} weight="bold" />
+            </NavLink>
+            <NavLink to={'/login'} className={getLinkClass}>
+              <GearIcon size={20} weight="regular" />
               <p>Configurações</p>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center space-x-1 h-24">
-        {console.log(isDarkMode)}
-        <SunIcon size={20} weight={!isDarkMode ? 'fill' : 'bold'} />
-        <ToggleButton checked={isDarkMode} onChange={setIsDarkMode} />
-        <MoonIcon size={20} weight={isDarkMode ? 'fill' : 'bold'} />
+      <div className="flex items-center justify-center h-24">
+        <ToggleDarkMode />
       </div>
     </aside>
   );
