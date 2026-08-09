@@ -6,9 +6,9 @@ export default function ToggleDarkMode() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <div className="flex space-x-1">
-      <SunIcon size={20} weight={!isDarkMode ? 'fill' : 'bold'} />
+      <SunIcon size={20} weight={!isDarkMode ? 'fill' : 'regular'} />
       <ToggleButton checked={isDarkMode} onChange={setIsDarkMode} />
-      <MoonIcon size={20} weight={isDarkMode ? 'fill' : 'bold'} />
+      <MoonIcon size={20} weight={isDarkMode ? 'fill' : 'regular'} />
     </div>
   );
 }

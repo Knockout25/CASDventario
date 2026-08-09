@@ -9,6 +9,7 @@ import {
   GearIcon,
   BellIcon,
   UsersIcon,
+  SignOutIcon
 } from '@phosphor-icons/react';
 import ToggleDarkMode from '../ToggleDarkMode';
 
