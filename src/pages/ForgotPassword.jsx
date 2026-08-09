@@ -2,8 +2,9 @@ import Input from '../components/ui/Input';
 import LogoWhite from '../assets/casdventario-white-logo.svg';
 import LogotypeBlack from '../assets/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
+import { ArrowLeftIcon } from '@phosphor-icons/react';
 
-export default function Login() {
+export default function ForgotPassword() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
@@ -22,23 +23,25 @@ export default function Login() {
                 src={LogotypeBlack}
                 alt="Logotipo CASDventário"
               />
-              <h2 className="text-center text-3xl font-bold">Entrar</h2>
+              <h2 className="text-center text-3xl font-bold">
+                Redefina sua senha
+              </h2>
+              <p className="text-center text-sm">
+                Digite o endereço de email verificado da sua conta de usuário
+                para podermos lhe enviarmos um link para redefinição de senha.
+              </p>
             </div>
             <Input text={'Email'} type={'email'} id={'email'} />
-            <Input text={'Senha'} type={'password'} id={'user-password'} />
-            <p className="font-semibold text-sm text-cyan-600 underline active:text-cyan-800">
-              <Link to={'/forgotpassword'}>Esqueceu a senha?</Link>
-            </p>
             <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
-              Entrar
+              Enviar link de redefinição de senha
             </button>
-            <p className="text-center text-sm">
-              Não tem uma conta?{' '}
+            <p className="p-2 rounded-md font-semibold text-center text-sm text-white bg-yellow-500 outline-none hover:bg-yellow-600 active:bg-yellow-700">
               <Link
-                to={'/signup'}
-                className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
+                to={'/login'}
+                className="flex items-center justify-center gap-2"
               >
-                Registre-se
+                <ArrowLeftIcon size={16} />
+                Voltar
               </Link>
             </p>
           </div>

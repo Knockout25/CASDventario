@@ -8,7 +8,11 @@ export default function Signup() {
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
         <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
-          <img className="w-72 select-none" src={LogoWhite} alt="" />
+          <img
+            className="w-72 select-none"
+            src={LogoWhite}
+            alt="Logo CASDventário"
+          />
         </aside>
         <main className="flex flex-1 items-center justify-center">
           <div className="flex flex-col w-full px-32 space-y-6">
