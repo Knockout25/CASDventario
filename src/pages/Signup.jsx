@@ -1,5 +1,6 @@
 import Input from '../components/ui/Input';
 import LogoWhite from '../assets/casdventario-white-logo.svg';
+import LogotypeBlack from '../assets/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 
 export default function Signup() {
@@ -7,17 +8,30 @@ export default function Signup() {
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
         <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
-          <img className="w-72 select-none" src={LogoWhite} alt="" srcSet="" />
+          <img className="w-72 select-none" src={LogoWhite} alt="" />
         </aside>
         <main className="flex flex-1 items-center justify-center">
           <div className="flex flex-col w-full px-32 space-y-6">
-            <h2 className="text-center text-3xl font-bold">Registrar-se</h2>
+            <div className="flex flex-col space-y-3 items-center">
+              <img
+                className="w-42 select-none"
+                src={LogotypeBlack}
+                alt="Logotipo CASDventário"
+              />
+              <h2 className="text-center text-3xl font-bold">Registrar-se</h2>
+            </div>
             <div className="flex flex-row space-x-2">
               <Input text={'Primeiro nome'} type={'text'} id={'first-name'} />
               <Input text={'Segundo nome'} type={'text'} id={'middle-name'} />
             </div>
             <Input text={'Email'} type={'email'} id={'email'} />
-            <Input text={'Senha'} type={'password'} id={'user-password'} />
+            <div className="space-y-1">
+              <Input text={'Senha'} type={'password'} id={'user-password'} />
+              <p className="text-xs text-gray-500">
+                *A senha deve ter pelo menos 8 caracteres, incluindo um número e
+                uma letra maiúscula.
+              </p>
+            </div>
             <Input
               text={'Confirmar senha'}
               type={'password'}
