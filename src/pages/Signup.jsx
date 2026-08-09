@@ -36,11 +36,16 @@ export default function Signup() {
                 uma letra maiúscula.
               </p>
             </div>
-            <Input
-              text={'Confirmar senha'}
-              type={'password'}
-              id={'confirmation-user-password'}
-            />
+            <div className="space-y-1">
+              <Input
+                text={'Confirmar senha'}
+                type={'password'}
+                id={'confirmation-user-password'}
+              />
+              <p className="text-xs text-gray-500">
+                *As senhas devem ser as mesmas.
+              </p>
+            </div>
             <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
               Enviar solicitação de cadastro
             </button>

@@ -28,7 +28,7 @@ export default function ForgotPassword() {
               </h2>
               <p className="text-center text-sm">
                 Digite o endereço de email verificado da sua conta de usuário
-                para podermos lhe enviarmos um link para redefinição de senha.
+                para poder lhe enviarmos um link de redefinição de senha.
               </p>
             </div>
             <Input text={'Email'} type={'email'} id={'email'} />
