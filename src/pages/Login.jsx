@@ -26,19 +26,19 @@ export default function Login() {
             </div>
             <Input text={'Email'} type={'email'} id={'email'} />
             <Input text={'Senha'} type={'password'} id={'user-password'} />
-            <p className="font-semibold text-sm text-cyan-600 active:text-cyan-800">
+            <p className="font-semibold text-sm text-cyan-600 underline active:text-cyan-800">
               <Link>Esqueceu a senha?</Link>
             </p>
             <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
               Entrar
             </button>
             <p className="text-center text-sm">
-              Já possui uma conta?{' '}
+              Não tem uma conta?{' '}
               <Link
                 to={'/signup'}
-                className="font-semibold text-cyan-600 cursor-pointer active:text-cyan-800"
+                className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
               >
-                Entrar
+                Registre-se
               </Link>
             </p>
           </div>

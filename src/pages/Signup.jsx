@@ -44,7 +44,7 @@ export default function Signup() {
               Já possui uma conta?{' '}
               <Link
                 to={'/login'}
-                className="font-semibold text-cyan-600 cursor-pointer active:text-cyan-800"
+                className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
               >
                 Entrar
               </Link>
