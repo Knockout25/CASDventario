@@ -6,7 +6,7 @@ import { ArrowLeftIcon } from '@phosphor-icons/react';
 
 export default function ForgotPassword() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col font-geist">
       <div className="flex flex-1">
         <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
           <img
