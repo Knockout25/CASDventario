@@ -5,10 +5,10 @@ import { useState } from 'react';
 export default function ToggleDarkMode() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   return (
-    <div className="flex space-x-1">
-      <SunIcon size={20} weight={!isDarkMode ? 'fill' : 'regular'} />
+    <div className="flex space-x-2">
+      <SunIcon size={24} weight={!isDarkMode ? 'fill' : 'regular'} />
       <ToggleButton checked={isDarkMode} onChange={setIsDarkMode} />
-      <MoonIcon size={20} weight={isDarkMode ? 'fill' : 'regular'} />
+      <MoonIcon size={24} weight={isDarkMode ? 'fill' : 'regular'} />
     </div>
   );
 }

@@ -1,34 +1,33 @@
-import LogotypeBlack from '../../assets/casdventario-black-logotype.svg';
+import LogotypeBlue from '../../assets/casdventario-blue-logotype.svg';
 import { NavLink } from 'react-router-dom';
 import {
   CirclesFourIcon,
   PackageIcon,
   BookIcon,
-  NotebookIcon,
   UserIcon,
   GearIcon,
   BellIcon,
   UsersIcon,
-  SignOutIcon
+  LaptopIcon,
 } from '@phosphor-icons/react';
 import ToggleDarkMode from '../ToggleDarkMode';
 
 export default function AsideNav() {
   const getLinkClass = ({
     isActive,
-  }) => `flex items-center space-x-2 p-2 rounded-md transition-all ease-in-out 
+  }) => `flex items-center space-x-3 px-3 py-2 rounded-md transition-all ease-in-out 
   ${
     isActive
-      ? 'bg-cyan-600/15 text-cyan-800'
+      ? 'bg-cyan-600 text-white'
       : 'hover:bg-cyan-600/15 active:text-cyan-800'
   }`;
 
   return (
-    <aside className="flex flex-col shrink-0 w-1/6 h-full border-r bg-white border-gray-600">
+    <aside className="flex flex-col shrink-0 w-1/6 h-full border-r bg-white border-gray-500">
       <div className="flex items-center justify-center h-24">
         <img
-          className="w-42 select-none"
-          src={LogotypeBlack}
+          className="w-48 select-none"
+          src={LogotypeBlue}
           alt="Logotipo CASDventário"
         />
       </div>
@@ -37,23 +36,23 @@ export default function AsideNav() {
           <p className="text-xs text-gray-500">Administrador</p>
           <div className="space-y-2">
             <NavLink to={'/login'} className={getLinkClass}>
-              <CirclesFourIcon size={20} weight="regular" />
+              <CirclesFourIcon size={24} weight="regular" />
               <p className="font-medium">Dashboard</p>
             </NavLink>
             <NavLink to={'/usermanagement'} className={getLinkClass}>
-              <UsersIcon size={20} weight="regular" />
+              <UsersIcon size={24} weight="regular" />
               <p className="font-medium">Usuários</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
-              <PackageIcon size={20} weight="regular" />
+              <PackageIcon size={24} weight="regular" />
               <p>Remessas</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
-              <BookIcon size={20} weight="regular" />
+              <BookIcon size={24} weight="regular" />
               <p>Livros</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
-              <NotebookIcon size={20} weight="regular" />
+              <LaptopIcon size={24} weight="regular" />
               <p>Notebooks</p>
             </NavLink>
           </div>
@@ -63,15 +62,15 @@ export default function AsideNav() {
           <p className="text-xs text-gray-500">Configurações</p>
           <div className="space-y-2">
             <NavLink to={'/login'} className={getLinkClass}>
-              <UserIcon size={20} weight="regular" />
+              <UserIcon size={24} weight="regular" />
               <p>Perfil</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
-              <BellIcon size={20} weight="regular" />
+              <BellIcon size={24} weight="regular" />
               <p>Notificações</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
-              <GearIcon size={20} weight="regular" />
+              <GearIcon size={24} weight="regular" />
               <p>Configurações</p>
             </NavLink>
           </div>
