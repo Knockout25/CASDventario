@@ -25,12 +25,32 @@ export default function Signup() {
               <h2 className="text-center text-3xl font-bold">Registrar-se</h2>
             </div>
             <div className="flex flex-row space-x-2">
-              <Input text={'Primeiro nome'} type={'text'} id={'first-name'} />
-              <Input text={'Segundo nome'} type={'text'} id={'middle-name'} />
+              <Input
+                color={'cyan-600'}
+                text={'Primeiro nome'}
+                type={'text'}
+                id={'first-name'}
+              />
+              <Input
+                color={'cyan-600'}
+                text={'Segundo nome'}
+                type={'text'}
+                id={'middle-name'}
+              />
             </div>
-            <Input text={'Email'} type={'email'} id={'email'} />
+            <Input
+              color={'cyan-600'}
+              text={'Email'}
+              type={'email'}
+              id={'email'}
+            />
             <div className="space-y-1">
-              <Input text={'Senha'} type={'password'} id={'user-password'} />
+              <Input
+                color={'cyan-600'}
+                text={'Senha'}
+                type={'password'}
+                id={'user-password'}
+              />
               <p className="text-xs text-gray-500">
                 *A senha deve ter pelo menos 8 caracteres, incluindo um número e
                 uma letra maiúscula.
@@ -38,6 +58,7 @@ export default function Signup() {
             </div>
             <div className="space-y-1">
               <Input
+                color={'cyan-600'}
                 text={'Confirmar senha'}
                 type={'password'}
                 id={'confirmation-user-password'}

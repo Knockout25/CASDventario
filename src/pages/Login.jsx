@@ -24,8 +24,18 @@ export default function Login() {
               />
               <h2 className="text-center text-3xl font-bold">Entrar</h2>
             </div>
-            <Input text={'Email'} type={'email'} id={'email'} />
-            <Input text={'Senha'} type={'password'} id={'user-password'} />
+            <Input
+              color={'cyan-600'}
+              text={'Email'}
+              type={'email'}
+              id={'email'}
+            />
+            <Input
+              color={'cyan-600'}
+              text={'Senha'}
+              type={'password'}
+              id={'user-password'}
+            />
             <p className="font-semibold text-sm text-cyan-600 underline active:text-cyan-800">
               <Link to={'/forgotpassword'}>Esqueceu a senha?</Link>
             </p>

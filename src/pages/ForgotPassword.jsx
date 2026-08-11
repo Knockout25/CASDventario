@@ -31,7 +31,12 @@ export default function ForgotPassword() {
                 para poder lhe enviarmos um link de redefinição de senha.
               </p>
             </div>
-            <Input text={'Email'} type={'email'} id={'email'} />
+            <Input
+              color={'cyan-600'}
+              text={'Email'}
+              type={'email'}
+              id={'email'}
+            />
             <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
               Enviar link de redefinição de senha
             </button>
