@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import AsideNav from '../../components/ui/AsideNav';
 import Header from '../../components/ui/Header';
-import Input from '../../components/ui/Input';
 import {
   CaretDownIcon,
   MagnifyingGlassIcon,
   PlusIcon,
 } from '@phosphor-icons/react';
+import PaginationTable from '../../components/ui/PaginationTable';
 
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
@@ -91,9 +91,7 @@ export default function AdmUserManagement() {
               <div>
                 <p>tabela</p>
               </div>
-              <div>
-                <p>paginacao</p>
-              </div>
+              <PaginationTable />
             </div>
           </div>
         </main>
