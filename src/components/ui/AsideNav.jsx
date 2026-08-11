@@ -41,7 +41,7 @@ export default function AsideNav() {
             </NavLink>
             <NavLink to={'/usermanagement'} className={getLinkClass}>
               <UsersIcon size={24} weight="regular" />
-              <p className="font-medium">Usuários</p>
+              <p className="font-medium">Administração</p>
             </NavLink>
             <NavLink to={'/login'} className={getLinkClass}>
               <PackageIcon size={24} weight="regular" />
