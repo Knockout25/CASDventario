@@ -26,12 +26,14 @@ export default function Login() {
             </div>
             <Input
               color={'cyan-600'}
+              background={'white'}
               text={'Email'}
               type={'email'}
               id={'email'}
             />
             <Input
               color={'cyan-600'}
+              background={'white'}
               text={'Senha'}
               type={'password'}
               id={'user-password'}

@@ -27,12 +27,14 @@ export default function Signup() {
             <div className="flex flex-row space-x-2">
               <Input
                 color={'cyan-600'}
+                background={'white'}
                 text={'Primeiro nome'}
                 type={'text'}
                 id={'first-name'}
               />
               <Input
                 color={'cyan-600'}
+                background={'white'}
                 text={'Segundo nome'}
                 type={'text'}
                 id={'middle-name'}
@@ -40,6 +42,7 @@ export default function Signup() {
             </div>
             <Input
               color={'cyan-600'}
+              background={'white'}
               text={'Email'}
               type={'email'}
               id={'email'}
@@ -47,6 +50,7 @@ export default function Signup() {
             <div className="space-y-1">
               <Input
                 color={'cyan-600'}
+                background={'white'}
                 text={'Senha'}
                 type={'password'}
                 id={'user-password'}
@@ -59,6 +63,7 @@ export default function Signup() {
             <div className="space-y-1">
               <Input
                 color={'cyan-600'}
+                background={'white'}
                 text={'Confirmar senha'}
                 type={'password'}
                 id={'confirmation-user-password'}

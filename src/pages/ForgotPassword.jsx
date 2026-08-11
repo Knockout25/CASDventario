@@ -33,6 +33,7 @@ export default function ForgotPassword() {
             </div>
             <Input
               color={'cyan-600'}
+              background={'white'}
               text={'Email'}
               type={'email'}
               id={'email'}
