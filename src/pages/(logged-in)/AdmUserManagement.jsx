@@ -65,7 +65,7 @@ export default function AdmUserManagement() {
                 </button>
               </div>
             </div>
-            <div className="rounded-lg border-2 border-gray-300">
+            <div className="space-y-3 rounded-lg border-2 border-gray-300">
               <div className="flex items-center justify-between px-4 py-3 bg-gray-200">
                 <h4 className="font-semibold text-lg">Administradores</h4>
                 <div className="flex space-x-2">

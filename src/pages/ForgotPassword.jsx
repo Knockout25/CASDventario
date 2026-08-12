@@ -32,8 +32,9 @@ export default function ForgotPassword() {
               </p>
             </div>
             <Input
-              color={'cyan-600'}
-              background={'white'}
+              textFocus={'peer-focus:text-cyan-600'}
+              borderFocus={'focus:border-cyan-600'}
+              background={'bg-white'}
               text={'Email'}
               type={'email'}
               id={'email'}

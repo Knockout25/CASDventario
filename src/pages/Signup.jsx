@@ -26,31 +26,35 @@ export default function Signup() {
             </div>
             <div className="flex flex-row space-x-2">
               <Input
-                color={'cyan-600'}
-                background={'white'}
+                textFocus={'peer-focus:text-cyan-600'}
+                borderFocus={'focus:border-cyan-600'}
+                background={'bg-white'}
                 text={'Primeiro nome'}
                 type={'text'}
                 id={'first-name'}
               />
               <Input
-                color={'cyan-600'}
-                background={'white'}
+                textFocus={'peer-focus:text-cyan-600'}
+                borderFocus={'focus:border-cyan-600'}
+                background={'bg-white'}
                 text={'Segundo nome'}
                 type={'text'}
                 id={'middle-name'}
               />
             </div>
             <Input
-              color={'cyan-600'}
-              background={'white'}
+              textFocus={'peer-focus:text-cyan-600'}
+              borderFocus={'focus:border-cyan-600'}
+              background={'bg-white'}
               text={'Email'}
               type={'email'}
               id={'email'}
             />
             <div className="space-y-1">
               <Input
-                color={'cyan-600'}
-                background={'white'}
+                textFocus={'peer-focus:text-cyan-600'}
+                borderFocus={'focus:border-cyan-600'}
+                background={'bg-white'}
                 text={'Senha'}
                 type={'password'}
                 id={'user-password'}
@@ -62,8 +66,9 @@ export default function Signup() {
             </div>
             <div className="space-y-1">
               <Input
-                color={'cyan-600'}
-                background={'white'}
+                textFocus={'peer-focus:text-cyan-600'}
+                borderFocus={'focus:border-cyan-600'}
+                background={'bg-white'}
                 text={'Confirmar senha'}
                 type={'password'}
                 id={'confirmation-user-password'}

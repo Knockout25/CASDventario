@@ -25,15 +25,17 @@ export default function Login() {
               <h2 className="text-center text-3xl font-bold">Entrar</h2>
             </div>
             <Input
-              color={'cyan-600'}
-              background={'white'}
+              textFocus={'peer-focus:text-cyan-600'}
+              borderFocus={'focus:border-cyan-600'}
+              background={'bg-white'}
               text={'Email'}
               type={'email'}
               id={'email'}
             />
             <Input
-              color={'cyan-600'}
-              background={'white'}
+              textFocus={'peer-focus:text-cyan-600'}
+              borderFocus={'focus:border-cyan-600'}
+              background={'bg-white'}
               text={'Senha'}
               type={'password'}
               id={'user-password'}
