@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import AsideNav from '../../components/ui/AsideNav';
 import Header from '../../components/ui/Header';
-import {
-  CaretDownIcon,
-  MagnifyingGlassIcon,
-  PlusIcon,
-} from '@phosphor-icons/react';
+import { CaretDownIcon, PlusIcon } from '@phosphor-icons/react';
 import PaginationTable from '../../components/ui/PaginationTable';
+import SearchBarExpandable from '../../components/ui/SearchBarExpandable';
 
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
+  
 
   return (
     <div className="flex h-screen font-geist">
@@ -69,20 +67,7 @@ export default function AdmUserManagement() {
               <div className="flex items-center justify-between px-4 py-3 bg-gray-200">
                 <h4 className="font-semibold text-lg">Administradores</h4>
                 <div className="flex space-x-2">
-                  <div className="group relative flex items-center w-10 h-10 px-4 py-2 rounded-lg border border-gray-600 overflow-hidden transition-all ease-in-out focus-within:w-64">
-                    <label
-                      className="absolute left-0 flex items-center justify-center w-10 h-10 transition-all ease-in-out"
-                      htmlFor="admSearch"
-                    >
-                      <MagnifyingGlassIcon size={20} />
-                    </label>
-                    <input
-                      className="w-full h-full pl-6 opacity-0 group-focus-within:opacity-100 outline-none placeholder:text-gray-500"
-                      id="admSearch"
-                      type="text"
-                      placeholder="Pesquisar usuário..."
-                    />
-                  </div>
+                  <SearchBarExpandable />
                   <button className="p-2 cursor-pointer">
                     <CaretDownIcon size={20} weight="fill" />
                   </button>

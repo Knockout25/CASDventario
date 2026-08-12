@@ -6,13 +6,13 @@ export default function PaginationTable() {
       <button className="flex items-center justify-center w-10 h-10 rounded-md cursor-pointer">
         <CaretLeftIcon size={20} />
       </button>
-      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800 focus:text-white focus:bg-cyan-600">
+      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 focus:text-white focus:bg-cyan-600">
         <p>1</p>
       </button>
-      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800 focus:text-white focus:bg-cyan-600">
+      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 focus:text-white focus:bg-cyan-600">
         <p>2</p>
       </button>
-      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 active:text-cyan-800 focus:text-white focus:bg-cyan-600">
+      <button className="w-10 h-10 rounded-md cursor-pointer transition-all ease-in-out hover:bg-cyan-600/15 focus:text-white focus:bg-cyan-600">
         <p>3</p>
       </button>
       <div className="flex items-center justify-center w-10 h-10 rounded-md">
