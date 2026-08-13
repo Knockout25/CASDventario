@@ -7,7 +7,6 @@ import SearchBarExpandable from '../../components/ui/SearchBarExpandable';
 
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
-  
 
   return (
     <div className="flex h-screen font-geist">
