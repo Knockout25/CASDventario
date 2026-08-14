@@ -1,12 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AsideNav from '../../components/ui/AsideNav';
 import Header from '../../components/ui/Header';
 import { CaretDownIcon, PlusIcon } from '@phosphor-icons/react';
 import PaginationTable from '../../components/ui/PaginationTable';
 import SearchBarExpandable from '../../components/ui/SearchBarExpandable';
+import UsersDataTable from './usermanagement/columns';
+
+// Cria uma função para consumir os dados da API
+async function fetchUsers() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  return response.json();
+}
 
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
+
+  // Define o valor de cada usuário
+  const [users, setUsers] = useState([]);
+
+  // Hook para buscar os valores função que armazena a API
+  useEffect(() => {
+    // Armazena cada array da API consumida em 'data'
+    fetchUsers().then((data) => {
+      setUsers(data);
+    });
+  }, []);
 
   return (
     <div className="flex h-screen font-geist">
@@ -73,7 +91,7 @@ export default function AdmUserManagement() {
                 </div>
               </div>
               <div>
-                <p>tabela</p>
+                <UsersDataTable users={users} />
               </div>
               <PaginationTable />
             </div>
