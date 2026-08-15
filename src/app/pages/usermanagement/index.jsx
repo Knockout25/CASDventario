@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import AsideNav from '../../../components/ui/AsideNav';
-import Header from '../../../components/ui/Header';
+import AsideNav from '../../../components/ui/aside-nav';
+import Header from '../../../components/ui/header';
 import { CaretDownIcon, CaretRightIcon, PlusIcon } from '@phosphor-icons/react';
-import PaginationTable from '../../../components/ui/PaginationTable';
-import SearchBarExpandable from '../../../components/ui/SearchBarExpandable';
+import SearchBar from '../../../components/ui/search-bar';
 import UsersDataTable from './columns';
 
 // Cria uma função para consumir os dados da API
@@ -87,7 +86,7 @@ export default function AdmUserManagement() {
               <div className="flex items-center justify-between px-4 w-full h-16 bg-gray-200">
                 <h4 className="font-semibold text-lg">Administradores</h4>
                 <div className="flex space-x-2 transition-all ease-in-out">
-                  <SearchBarExpandable
+                  <SearchBar
                     value={globalFilter}
                     onChange={(e) => setGlobalFilter(e.target.value)}
                   />
