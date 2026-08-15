@@ -1,7 +1,7 @@
-import Input from '../../../components/ui/Input';
 import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
+import InputFloatingLabel from '../../../components/ui/input-floating-label';
 
 export default function Signup() {
   return (
@@ -25,7 +25,7 @@ export default function Signup() {
               <h2 className="text-center text-3xl font-bold">Registrar-se</h2>
             </div>
             <div className="flex flex-row space-x-2">
-              <Input
+              <InputFloatingLabel
                 textFocus={'peer-focus:text-cyan-600'}
                 borderFocus={'focus:border-cyan-600'}
                 background={'bg-white'}
@@ -33,7 +33,7 @@ export default function Signup() {
                 type={'text'}
                 id={'first-name'}
               />
-              <Input
+              <InputFloatingLabel
                 textFocus={'peer-focus:text-cyan-600'}
                 borderFocus={'focus:border-cyan-600'}
                 background={'bg-white'}
@@ -42,7 +42,7 @@ export default function Signup() {
                 id={'middle-name'}
               />
             </div>
-            <Input
+            <InputFloatingLabel
               textFocus={'peer-focus:text-cyan-600'}
               borderFocus={'focus:border-cyan-600'}
               background={'bg-white'}
@@ -51,7 +51,7 @@ export default function Signup() {
               id={'email'}
             />
             <div className="space-y-1">
-              <Input
+              <InputFloatingLabel
                 textFocus={'peer-focus:text-cyan-600'}
                 borderFocus={'focus:border-cyan-600'}
                 background={'bg-white'}
@@ -65,7 +65,7 @@ export default function Signup() {
               </p>
             </div>
             <div className="space-y-1">
-              <Input
+              <InputFloatingLabel
                 textFocus={'peer-focus:text-cyan-600'}
                 borderFocus={'focus:border-cyan-600'}
                 background={'bg-white'}

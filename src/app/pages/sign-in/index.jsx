@@ -1,7 +1,7 @@
-import Input from '../../../components/ui/Input';
 import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
+import InputFloatingLabel from '../../../components/ui/input-floating-label';
 
 export default function Login() {
   return (
@@ -24,7 +24,7 @@ export default function Login() {
               />
               <h2 className="text-center text-3xl font-bold">Entrar</h2>
             </div>
-            <Input
+            <InputFloatingLabel
               textFocus={'peer-focus:text-cyan-600'}
               borderFocus={'focus:border-cyan-600'}
               background={'bg-white'}
@@ -32,7 +32,7 @@ export default function Login() {
               type={'email'}
               id={'email'}
             />
-            <Input
+            <InputFloatingLabel
               textFocus={'peer-focus:text-cyan-600'}
               borderFocus={'focus:border-cyan-600'}
               background={'bg-white'}

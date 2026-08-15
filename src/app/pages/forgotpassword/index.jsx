@@ -1,8 +1,8 @@
-import Input from '../../../components/ui/Input';
 import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
+import InputFloatingLabel from '../../../components/ui/input-floating-label';
 
 export default function ForgotPassword() {
   return (
@@ -31,7 +31,7 @@ export default function ForgotPassword() {
                 para poder lhe enviarmos um link de redefinição de senha.
               </p>
             </div>
-            <Input
+            <InputFloatingLabel
               textFocus={'peer-focus:text-cyan-600'}
               borderFocus={'focus:border-cyan-600'}
               background={'bg-white'}
