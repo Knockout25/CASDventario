@@ -10,7 +10,7 @@ import {
   UsersIcon,
   LaptopIcon,
 } from '@phosphor-icons/react';
-import ToggleDarkMode from '../ToggleDarkMode';
+import ThemeToggle from '../theme-switcher';
 
 export default function AsideNav() {
   const getLinkClass = ({
@@ -77,7 +77,7 @@ export default function AsideNav() {
         </div>
       </div>
       <div className="flex items-center justify-center h-24">
-        <ToggleDarkMode />
+        <ThemeToggle />
       </div>
     </aside>
   );
