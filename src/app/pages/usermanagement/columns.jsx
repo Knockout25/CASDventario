@@ -4,7 +4,6 @@ import { createColumnHelper } from '@tanstack/react-table';
 import { DataTable } from './data-table';
 import { Button } from '@/components/ui/button';
 import { ArrowsDownUpIcon } from '@phosphor-icons/react';
-import AvatarTemplate from '../../../assets/avatar-template.svg';
 
 const columnHelper = createColumnHelper();
 

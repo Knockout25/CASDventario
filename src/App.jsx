@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ForgotPassword from './pages/ForgotPassword';
-import AdmUserManagement from './pages/(logged-in)/AdmUserManagement';
+import SignIn from './app/pages/sign-in/index';
+import SignUp from './app/pages/sign-up/index';
+import ForgotPassword from './app/pages/forgotpassword';
+import AdmUserManagement from './app/pages/usermanagement';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path='/forgotpassword' element={<ForgotPassword />} />
-        <Route path='/usermanagement' element={<AdmUserManagement />} />
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/usermanagement" element={<AdmUserManagement />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </BrowserRouter>

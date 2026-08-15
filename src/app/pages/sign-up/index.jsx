@@ -1,6 +1,6 @@
-import Input from '../components/ui/Input';
-import LogoWhite from '../assets/casdventario-white-logo.svg';
-import LogotypeBlack from '../assets/casdventario-black-logotype.svg';
+import Input from '../../../components/ui/Input';
+import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
+import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 
 export default function Signup() {
@@ -83,7 +83,7 @@ export default function Signup() {
             <p className="text-center text-sm">
               Já possui uma conta?{' '}
               <Link
-                to={'/login'}
+                to={'/signin'}
                 className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
               >
                 Entrar

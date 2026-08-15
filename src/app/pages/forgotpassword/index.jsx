@@ -1,6 +1,6 @@
-import Input from '../components/ui/Input';
-import LogoWhite from '../assets/casdventario-white-logo.svg';
-import LogotypeBlack from '../assets/casdventario-black-logotype.svg';
+import Input from '../../../components/ui/Input';
+import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
+import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
 
@@ -44,7 +44,7 @@ export default function ForgotPassword() {
             </button>
             <p className="p-2 rounded-md font-semibold text-center text-sm text-white bg-yellow-500 outline-none hover:bg-yellow-600 active:bg-yellow-700">
               <Link
-                to={'/login'}
+                to={'/signin'}
                 className="flex items-center justify-center gap-2"
               >
                 <ArrowLeftIcon size={16} />

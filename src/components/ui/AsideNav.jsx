@@ -1,4 +1,4 @@
-import LogotypeBlue from '../../assets/casdventario-blue-logotype.svg';
+import LogotypeBlue from '../../assets/brand/casdventario-blue-logotype.svg';
 import { NavLink } from 'react-router-dom';
 import {
   CirclesFourIcon,
@@ -35,7 +35,7 @@ export default function AsideNav() {
         <div>
           <p className="text-xs text-gray-500">Administrador</p>
           <div className="space-y-2">
-            <NavLink to={'/login'} className={getLinkClass}>
+            <NavLink to={'/'} className={getLinkClass}>
               <CirclesFourIcon size={24} weight="regular" />
               <p className="font-medium">Dashboard</p>
             </NavLink>
@@ -43,15 +43,15 @@ export default function AsideNav() {
               <UsersIcon size={24} weight="regular" />
               <p className="font-medium">Administração</p>
             </NavLink>
-            <NavLink to={'/login'} className={getLinkClass}>
+            <NavLink to={'/'} className={getLinkClass}>
               <PackageIcon size={24} weight="regular" />
               <p>Remessas</p>
             </NavLink>
-            <NavLink to={'/login'} className={getLinkClass}>
+            <NavLink to={'/'} className={getLinkClass}>
               <BookIcon size={24} weight="regular" />
               <p>Livros</p>
             </NavLink>
-            <NavLink to={'/login'} className={getLinkClass}>
+            <NavLink to={'/'} className={getLinkClass}>
               <LaptopIcon size={24} weight="regular" />
               <p>Notebooks</p>
             </NavLink>

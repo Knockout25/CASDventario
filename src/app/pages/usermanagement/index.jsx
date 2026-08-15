@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import AsideNav from '../../components/ui/AsideNav';
-import Header from '../../components/ui/Header';
+import AsideNav from '../../../components/ui/AsideNav';
+import Header from '../../../components/ui/Header';
 import { CaretDownIcon, CaretRightIcon, PlusIcon } from '@phosphor-icons/react';
-import PaginationTable from '../../components/ui/PaginationTable';
-import SearchBarExpandable from '../../components/ui/SearchBarExpandable';
-import UsersDataTable from './usermanagement/columns';
+import PaginationTable from '../../../components/ui/PaginationTable';
+import SearchBarExpandable from '../../../components/ui/SearchBarExpandable';
+import UsersDataTable from './columns';
 
 // Cria uma função para consumir os dados da API
 async function fetchUsers() {
@@ -15,7 +15,7 @@ async function fetchUsers() {
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
   const [showUsers, setShowUsers] = useState(true);
-  
+
   // Filtro das tabelas
   const [globalFilter, setGlobalFilter] = useState('');
   // Define o valor de cada usuário
