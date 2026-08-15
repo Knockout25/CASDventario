@@ -48,7 +48,7 @@ export function DataTable({ columns, data, pageSize = 10, filterValue = '' }) {
                   header.column.columnDef.meta?.className || '';
                 return (
                   <TableHead
-                    className={`font-bold ${customClass}`}
+                    className={`font-bold select-none ${customClass}`}
                     key={header.id}
                   >
                     {header.isPlaceholder ? null : (
