@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import AsideNav from '../../components/ui/AsideNav';
 import Header from '../../components/ui/Header';
-import { CaretDownIcon, PlusIcon } from '@phosphor-icons/react';
+import { CaretDownIcon, CaretRightIcon, PlusIcon } from '@phosphor-icons/react';
 import PaginationTable from '../../components/ui/PaginationTable';
 import SearchBarExpandable from '../../components/ui/SearchBarExpandable';
 import UsersDataTable from './usermanagement/columns';
@@ -14,7 +14,9 @@ async function fetchUsers() {
 
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
-
+  const [showUsers, setShowUsers] = useState(true);
+  
+  // Filtro das tabelas
   const [globalFilter, setGlobalFilter] = useState('');
   // Define o valor de cada usuário
   const [users, setUsers] = useState([]);
@@ -81,20 +83,34 @@ export default function AdmUserManagement() {
                 </button>
               </div>
             </div>
-            <div className="space-y-3 rounded-lg border-2 border-gray-300">
-              <div className="flex items-center justify-between px-4 py-3 bg-gray-200">
+            <div className="rounded-lg border-2 border-gray-300">
+              <div className="flex items-center justify-between px-4 w-full h-16 bg-gray-200">
                 <h4 className="font-semibold text-lg">Administradores</h4>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 transition-all ease-in-out">
                   <SearchBarExpandable
                     value={globalFilter}
                     onChange={(e) => setGlobalFilter(e.target.value)}
                   />
-                  <button className="p-2 cursor-pointer">
-                    <CaretDownIcon size={20} weight="fill" />
-                  </button>
+                  {showUsers ? (
+                    <button
+                      onClick={() => setShowUsers(!showUsers)}
+                      className="p-2 cursor-pointer"
+                    >
+                      <CaretDownIcon size={20} weight="fill" />
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setShowUsers(!showUsers)}
+                      className="p-2 cursor-pointer"
+                    >
+                      <CaretRightIcon size={20} weight="fill" />
+                    </button>
+                  )}
                 </div>
               </div>
-              <div className='px-4'>
+              <div
+                className={`p-4 transition-all ease-in-out ${showUsers ? '' : 'hidden'}`}
+              >
                 <UsersDataTable users={users} filterValue={globalFilter} />
               </div>
             </div>
