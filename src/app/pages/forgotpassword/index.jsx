@@ -1,5 +1,6 @@
 import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
+import LogotypeWhite from '../../../assets/brand/casdventario-white-logotype.svg';
 import { Link } from 'react-router-dom';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
 import InputFloatingLabel from '../../../components/ui/input-floating-label';
@@ -20,8 +21,13 @@ export default function ForgotPassword() {
           <div className="flex flex-col w-full px-32 space-y-6">
             <div className="flex flex-col space-y-3 items-center">
               <img
-                className="w-42 select-none"
+                className="w-42 select-none dark:hidden"
                 src={LogotypeBlack}
+                alt="Logotipo CASDventário"
+              />
+              <img
+                className="hidden w-42 select-none dark:block"
+                src={LogotypeWhite}
                 alt="Logotipo CASDventário"
               />
               <h2 className="text-center text-3xl font-bold">

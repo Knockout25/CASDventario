@@ -9,7 +9,7 @@ export default function InputFloatingLabel({ id, type, text }) {
       />
       <label
         htmlFor={id}
-        className={`absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground bg-background cursor-text select-none peer-focus:left-2 peer-focus:top-0 peer-focus:px-1 peer-focus:font-medium peer-focus:text-xs peer-focus:text-primary peer-not-placeholder-shown:left-2 peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:px-1 peer-not-placeholder-shown:text-xs transition-all ease-in-out`}
+        className={`absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground cursor-text select-none peer-focus:left-2 peer-focus:top-0 peer-focus:px-1 peer-focus:text-xs peer-focus:text-primary peer-focus:bg-background peer-not-placeholder-shown:left-2 peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:px-1 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:bg-background transition-all ease-in-out`}
       >
         {text}
       </label>
