@@ -1,5 +1,6 @@
-import { BellIcon, SignOutIcon } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
+
+import { BellIcon, SignOutIcon } from '@phosphor-icons/react';
 
 export default function Header({ headerTitle, AccountName, AccountPosition }) {
   const avatarUrl = `https://api.dicebear.com/10.x/lorelei/svg?seed=${encodeURIComponent(AccountName)}`;

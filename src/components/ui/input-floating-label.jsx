@@ -1,4 +1,11 @@
-export default function InputFloatingLabel({ text, type, id, textFocus, borderFocus, background }) {
+export default function InputFloatingLabel({
+  id,
+  type,
+  text,
+  textFocus,
+  borderFocus,
+  background,
+}) {
   return (
     <div className="relative w-full">
       <input

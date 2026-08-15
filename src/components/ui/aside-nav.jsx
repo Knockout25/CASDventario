@@ -1,5 +1,5 @@
-import LogotypeBlue from '../../assets/brand/casdventario-blue-logotype.svg';
 import { NavLink } from 'react-router-dom';
+
 import {
   CirclesFourIcon,
   PackageIcon,
@@ -10,7 +10,10 @@ import {
   UsersIcon,
   LaptopIcon,
 } from '@phosphor-icons/react';
+
 import ThemeToggle from '../theme-switcher';
+
+import LogotypeBlue from '../../assets/brand/casdventario-blue-logotype.svg';
 
 export default function AsideNav() {
   const getLinkClass = ({
