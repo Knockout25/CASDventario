@@ -2,12 +2,13 @@ import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 import InputFloatingLabel from '../../../components/ui/input-floating-label';
+import { Button } from '@/components/ui/button';
 
 export default function Login() {
   return (
     <div className="h-screen flex flex-col font-geist">
       <div className="flex flex-1">
-        <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
+        <aside className="flex items-center justify-center w-1/2 bg-primary">
           <img
             className="w-72 select-none"
             src={LogoWhite}
@@ -24,33 +25,23 @@ export default function Login() {
               />
               <h2 className="text-center text-3xl font-bold">Entrar</h2>
             </div>
+            <InputFloatingLabel text={'Email'} type={'email'} id={'email'} />
             <InputFloatingLabel
-              textFocus={'peer-focus:text-cyan-600'}
-              borderFocus={'focus:border-cyan-600'}
-              background={'bg-white'}
-              text={'Email'}
-              type={'email'}
-              id={'email'}
-            />
-            <InputFloatingLabel
-              textFocus={'peer-focus:text-cyan-600'}
-              borderFocus={'focus:border-cyan-600'}
-              background={'bg-white'}
               text={'Senha'}
               type={'password'}
               id={'user-password'}
             />
-            <p className="font-semibold text-sm text-cyan-600 underline active:text-cyan-800">
+            <p className="font-semibold text-primary underline active:text-foreground">
               <Link to={'/forgotpassword'}>Esqueceu a senha?</Link>
             </p>
-            <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
+            <Button variant="default" className="py-5">
               Entrar
-            </button>
-            <p className="text-center text-sm">
+            </Button>
+            <p className="text-center">
               Não tem uma conta?{' '}
               <Link
                 to={'/signup'}
-                className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
+                className="font-semibold text-primary underline active:text-foreground"
               >
                 Registre-se
               </Link>
