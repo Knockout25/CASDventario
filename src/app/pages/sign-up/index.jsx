@@ -2,12 +2,13 @@ import LogoWhite from '../../../assets/brand/casdventario-white-logo.svg';
 import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg';
 import { Link } from 'react-router-dom';
 import InputFloatingLabel from '../../../components/ui/input-floating-label';
+import { Button } from '@/components/ui/button';
 
-export default function Signup() {
+export default function SignUp() {
   return (
     <div className="h-screen flex flex-col font-geist">
       <div className="flex flex-1">
-        <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
+        <aside className="flex items-center justify-center w-1/2 bg-primary">
           <img
             className="w-72 select-none"
             src={LogoWhite}
@@ -26,65 +27,46 @@ export default function Signup() {
             </div>
             <div className="flex flex-row space-x-2">
               <InputFloatingLabel
-                textFocus={'peer-focus:text-cyan-600'}
-                borderFocus={'focus:border-cyan-600'}
-                background={'bg-white'}
                 text={'Primeiro nome'}
                 type={'text'}
                 id={'first-name'}
               />
               <InputFloatingLabel
-                textFocus={'peer-focus:text-cyan-600'}
-                borderFocus={'focus:border-cyan-600'}
-                background={'bg-white'}
                 text={'Segundo nome'}
                 type={'text'}
                 id={'middle-name'}
               />
             </div>
-            <InputFloatingLabel
-              textFocus={'peer-focus:text-cyan-600'}
-              borderFocus={'focus:border-cyan-600'}
-              background={'bg-white'}
-              text={'Email'}
-              type={'email'}
-              id={'email'}
-            />
+            <InputFloatingLabel text={'Email'} type={'email'} id={'email'} />
             <div className="space-y-1">
               <InputFloatingLabel
-                textFocus={'peer-focus:text-cyan-600'}
-                borderFocus={'focus:border-cyan-600'}
-                background={'bg-white'}
                 text={'Senha'}
                 type={'password'}
                 id={'user-password'}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 *A senha deve ter pelo menos 8 caracteres, incluindo um número e
                 uma letra maiúscula.
               </p>
             </div>
             <div className="space-y-1">
               <InputFloatingLabel
-                textFocus={'peer-focus:text-cyan-600'}
-                borderFocus={'focus:border-cyan-600'}
-                background={'bg-white'}
                 text={'Confirmar senha'}
                 type={'password'}
                 id={'confirmation-user-password'}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 *As senhas devem ser as mesmas.
               </p>
             </div>
-            <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
+            <Button variant="default" className="py-5">
               Enviar solicitação de cadastro
-            </button>
-            <p className="text-center text-sm">
+            </Button>
+            <p className="text-center">
               Já possui uma conta?{' '}
               <Link
                 to={'/signin'}
-                className="font-semibold text-cyan-600 cursor-pointer underline active:text-cyan-800"
+                className="font-semibold text-primary cursor-pointer underline active:text-foreground"
               >
                 Entrar
               </Link>

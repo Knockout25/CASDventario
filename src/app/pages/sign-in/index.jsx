@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import InputFloatingLabel from '../../../components/ui/input-floating-label';
 import { Button } from '@/components/ui/button';
 
-export default function Login() {
+export default function SignIn() {
   return (
     <div className="h-screen flex flex-col font-geist">
       <div className="flex flex-1">

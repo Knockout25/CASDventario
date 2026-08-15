@@ -3,12 +3,13 @@ import LogotypeBlack from '../../../assets/brand/casdventario-black-logotype.svg
 import { Link } from 'react-router-dom';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
 import InputFloatingLabel from '../../../components/ui/input-floating-label';
+import { Button } from '@/components/ui/button';
 
 export default function ForgotPassword() {
   return (
     <div className="h-screen flex flex-col font-geist">
       <div className="flex flex-1">
-        <aside className="flex items-center justify-center w-1/2 bg-cyan-600">
+        <aside className="flex items-center justify-center w-1/2 bg-primary">
           <img
             className="w-72 select-none"
             src={LogoWhite}
@@ -26,7 +27,7 @@ export default function ForgotPassword() {
               <h2 className="text-center text-3xl font-bold">
                 Redefina sua senha
               </h2>
-              <p className="text-center text-sm">
+              <p className="text-center">
                 Digite o endereço de email verificado da sua conta de usuário
                 para poder lhe enviarmos um link de redefinição de senha.
               </p>
@@ -39,15 +40,15 @@ export default function ForgotPassword() {
               type={'email'}
               id={'email'}
             />
-            <button className="p-2 rounded-md font-semibold text-sm text-white bg-cyan-600 outline-none hover:bg-cyan-700 active:bg-cyan-800">
+            <Button variant="default" className="py-5">
               Enviar link de redefinição de senha
-            </button>
-            <p className="p-2 rounded-md font-semibold text-center text-sm text-white bg-yellow-500 outline-none hover:bg-yellow-600 active:bg-yellow-700">
+            </Button>
+            <p className="py-2 rounded-md text-sm text-center text-secondary-foreground bg-secondary">
               <Link
                 to={'/signin'}
                 className="flex items-center justify-center gap-2"
               >
-                <ArrowLeftIcon size={16} />
+                <ArrowLeftIcon size={20} />
                 Voltar
               </Link>
             </p>
