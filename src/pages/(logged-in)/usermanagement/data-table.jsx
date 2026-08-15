@@ -13,8 +13,9 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { features } from './data-table-features';
+import { CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react';
 
-export function DataTable({ columns, data, pageSize = 10 }) {
+export function DataTable({ columns, data, pageSize = 10, filterValue = '' }) {
   const [sorting, setSorting] = React.useState([]);
 
   const table = useTable({
@@ -32,25 +33,24 @@ export function DataTable({ columns, data, pageSize = 10 }) {
     onSortingChange: setSorting,
   });
 
+  React.useEffect(() => {
+    table.getColumn('name')?.setFilterValue(filterValue);
+  }, [filterValue, table]);
+
   return (
     <div className="overflow-hidden rounded-md border">
-      <div className="flex items-center py-4">
-        <Input
-          placeholder="Pesquisar usuário..."
-          value={table.getColumn('name')?.getFilterValue() ?? ''}
-          onChange={(event) =>
-            table.getColumn('name')?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
-        />
-      </div>
-      <Table>
-        <TableHeader>
+      <Table className="table-fixed w-full">
+        <TableHeader className="bg-gray-200">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
+                const customClass =
+                  header.column.columnDef.meta?.className || '';
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead
+                    className={`font-bold ${customClass}`}
+                    key={header.id}
+                  >
                     {header.isPlaceholder ? null : (
                       <table.FlexRender header={header} />
                     )}
@@ -67,11 +67,18 @@ export function DataTable({ columns, data, pageSize = 10 }) {
                 key={row.id}
                 data-state={row.getIsSelected() && 'selected'}
               >
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    <table.FlexRender cell={cell} />
-                  </TableCell>
-                ))}
+                {row.getVisibleCells().map((cell) => {
+                  const customClass =
+                    cell.column.columnDef.meta?.className || '';
+                  return (
+                    <TableCell
+                      className={`truncate min-w-0 ${customClass}`}
+                      key={cell.id}
+                    >
+                      <table.FlexRender cell={cell} />
+                    </TableCell>
+                  );
+                })}
               </TableRow>
             ))
           ) : (
@@ -86,11 +93,10 @@ export function DataTable({ columns, data, pageSize = 10 }) {
       <div className="flex items-center justify-end space-x-2 py-4">
         <Button
           variant="outline"
-          size="sm"
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          Anterior
+          <CaretLeftIcon size={20} weight='bold'/>
         </Button>
         <p>
           Página {table.state.pagination.pageIndex + 1} de{' '}
@@ -98,11 +104,10 @@ export function DataTable({ columns, data, pageSize = 10 }) {
         </p>
         <Button
           variant="outline"
-          size="sm"
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          Próximo
+          <CaretRightIcon size={20} weight='bold'/>
         </Button>
       </div>
     </div>

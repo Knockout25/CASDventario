@@ -15,6 +15,7 @@ async function fetchUsers() {
 export default function AdmUserManagement() {
   const [activeTab, setActiveTab] = useState('users');
 
+  const [globalFilter, setGlobalFilter] = useState('');
   // Define o valor de cada usuário
   const [users, setUsers] = useState([]);
 
@@ -84,16 +85,18 @@ export default function AdmUserManagement() {
               <div className="flex items-center justify-between px-4 py-3 bg-gray-200">
                 <h4 className="font-semibold text-lg">Administradores</h4>
                 <div className="flex space-x-2">
-                  <SearchBarExpandable />
+                  <SearchBarExpandable
+                    value={globalFilter}
+                    onChange={(e) => setGlobalFilter(e.target.value)}
+                  />
                   <button className="p-2 cursor-pointer">
                     <CaretDownIcon size={20} weight="fill" />
                   </button>
                 </div>
               </div>
-              <div>
-                <UsersDataTable users={users} />
+              <div className='px-4'>
+                <UsersDataTable users={users} filterValue={globalFilter} />
               </div>
-              <PaginationTable />
             </div>
           </div>
         </main>
