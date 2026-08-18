@@ -11,6 +11,7 @@ import {
   LaptopIcon,
 } from '@phosphor-icons/react';
 
+import { Button } from '@/components/ui/button';
 import ThemeToggle from '../theme-switcher';
 
 import LogotypeBlue from '../../assets/brand/casdventario-blue-logotype.svg';
@@ -19,14 +20,10 @@ export default function AsideNav() {
   const getLinkClass = ({
     isActive,
   }) => `flex items-center space-x-3 px-3 py-2 rounded-md transition-all ease-in-out 
-  ${
-    isActive
-      ? 'bg-cyan-600 text-white'
-      : 'hover:bg-cyan-600/15 active:text-cyan-800'
-  }`;
+  ${isActive ? 'bg-primary' : 'hover:bg-primary/20'}`;
 
   return (
-    <aside className="flex flex-col shrink-0 w-1/6 h-full border-r bg-white border-gray-500">
+    <aside className="flex flex-col shrink-0 w-1/6 h-full border-r border-muted bg-sidebar">
       <div className="flex items-center justify-center h-24">
         <img
           className="w-48 select-none"
@@ -36,7 +33,7 @@ export default function AsideNav() {
       </div>
       <div className="flex flex-1 space-y-4 flex-col px-6">
         <div>
-          <p className="text-xs text-gray-500">Administrador</p>
+          <p className="text-xs text-muted-foreground">Administrador</p>
           <div className="space-y-2">
             <NavLink to={'/'} className={getLinkClass}>
               <CirclesFourIcon size={24} weight="regular" />
