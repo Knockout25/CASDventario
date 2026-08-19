@@ -27,7 +27,8 @@ export default function Header({ headerTitle, AccountName, AccountPosition }) {
   return (
     <header className="flex items-center justify-between w-full h-24 px-6 border-b">
       <div className="flex gap-4">
-        <SidebarTrigger />
+        <SidebarTrigger className="-mr-1" />
+        <Separator orientation="vertical" />
         <h2 className="font-semibold text-xl">{headerTitle}</h2>
       </div>
       <div className="flex items-center gap-4">
