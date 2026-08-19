@@ -21,8 +21,8 @@ export const columns = columnHelper.columns([
       const avatarUrl = `https://api.dicebear.com/10.x/lorelei/svg?seed=${encodeURIComponent(name)}`;
 
       return (
-        <div className='flex items-center gap-2'>
-          <img className='w-10 h-10' src={avatarUrl} alt="Avatar" />
+        <div className="flex items-center gap-2">
+          <img className="w-10 h-10" src={avatarUrl} alt="Avatar" />
           <p>{name}</p>
         </div>
       );
@@ -37,7 +37,7 @@ export const columns = columnHelper.columns([
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
           Email
-          <ArrowsDownUpIcon className="ml-2 h-4 w-4" />
+          <ArrowsDownUpIcon />
         </Button>
       );
     },
