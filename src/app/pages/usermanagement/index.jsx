@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
-import AsideNav from '../../../components/ui/aside-nav';
+
+import { PlusIcon, MagnifyingGlassIcon } from '@phosphor-icons/react';
+
 import Header from '../../../components/ui/header';
-import { CaretDownIcon, CaretRightIcon, MagnifyingGlassIcon, PlusIcon } from '@phosphor-icons/react';
-import SearchBar from '../../../components/ui/search-bar';
 import UsersDataTable from './columns';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-  InputGroupText,
 } from '@/components/ui/input-group';
 
 // Cria uma função para consumir os dados da API
@@ -23,9 +21,6 @@ async function fetchUsers() {
 }
 
 export default function AdmUserManagement() {
-  const [activeTab, setActiveTab] = useState('users');
-  const [showUsers, setShowUsers] = useState(true);
-
   // Filtro das tabelas
   const [globalFilter, setGlobalFilter] = useState('');
   // Define o valor de cada usuário
@@ -94,9 +89,7 @@ export default function AdmUserManagement() {
                     </InputGroup>
                   </div>
                 </div>
-                <div
-                  className={`p-4 w-full transition-all ease-in-out ${showUsers ? '' : 'hidden'}`}
-                >
+                <div className="p-4 w-full transition-all ease-in-out">
                   <UsersDataTable users={users} filterValue={globalFilter} />
                 </div>
               </div>
