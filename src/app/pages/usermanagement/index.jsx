@@ -36,7 +36,7 @@ export default function AdmUserManagement() {
         <AppSidebar />
         <div className="flex flex-1 flex-col min-w-0 w-full h-full">
           <Header
-            headerTitle={'Administração'}
+            headerTitle={'Usuários'}
             AccountName={'Administrador'}
             AccountPosition={'CEO'}
           />

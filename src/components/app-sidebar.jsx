@@ -32,7 +32,7 @@ const data = {
       icon: CirclesFourIcon,
     },
     {
-      title: 'Administrador',
+      title: 'Usuários',
       url: '/usermanagement',
       icon: UsersIcon,
     },
@@ -99,7 +99,6 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavSecondary items={data.navSecondary} />
       </SidebarContent>
     </Sidebar>
   );

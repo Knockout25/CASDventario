@@ -46,7 +46,7 @@ export default function Header({ headerTitle, AccountName, AccountPosition }) {
                 alt={`Avatar de ${AccountName}`}
               />
               <div className="flex flex-col items-start">
-                <p className="font-medium text-sm">{AccountName}</p>
+                <p className="font-medium">{AccountName}</p>
                 <p className="text-xs text-muted-foreground">
                   {AccountPosition}
                 </p>

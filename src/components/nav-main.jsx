@@ -15,7 +15,7 @@ export default function NavMain({ items }) {
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Administração</SidebarGroupLabel>
+      <SidebarGroupLabel>Menu Principal</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => {
           const isActive = location.pathname === item.url;
