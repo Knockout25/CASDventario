@@ -101,9 +101,6 @@ export function AppSidebar() {
         <NavMain items={data.navMain} />
         <NavSecondary items={data.navSecondary} />
       </SidebarContent>
-      <SidebarFooter className='flex items-center justify-center'>
-        <ThemeSwitcher />
-      </SidebarFooter>
     </Sidebar>
   );
 }
