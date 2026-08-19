@@ -32,11 +32,25 @@ export default function Header({ headerTitle, AccountName, AccountPosition }) {
         <h2 className="font-semibold text-xl">{headerTitle}</h2>
       </div>
       <div className="flex items-center gap-4">
-        <Button variant="outline" size="icon">
-          <Link>
-            <BellIcon />
-          </Link>
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Button variant="outline" size="icon">
+              <BellIcon />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align='end'>
+            <DropdownMenuGroup>
+              <DropdownMenuItem>
+                <p>notificação1</p>
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+            <DropdownMenuGroup>
+              <DropdownMenuItem>
+                <p>notificação1</p>
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <Separator orientation="vertical" />
         <DropdownMenu>
           <DropdownMenuTrigger>
