@@ -34,7 +34,7 @@ export default function AdmUserManagement() {
                   <div>
                     <Button variant="secondary" size="lg">
                       <PlusIcon />
-                      <p>Adicionar Usuário</p>
+                      <p>Adicionar Administrador
                     </Button>
                   </div>
                 </div>
