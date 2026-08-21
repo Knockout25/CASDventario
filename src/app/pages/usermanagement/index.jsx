@@ -6,8 +6,40 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import TableSection from '@/components/table-section';
+import {
+  Dialog,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from '@/components/ui/dialog';
+import { Field, FieldGroup } from '@/components/ui/field';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectTrigger,
+  SelectValue,
+  SelectItem,
+  SelectGroup,
+} from '@/components/ui/select';
 
 export default function AdmUserManagement() {
+  const admRoles = [
+    {
+      label: 'Administrador Básico',
+      value: 'normalAdm',
+    },
+    {
+      label: 'Administrador Mestre',
+      value: 'masterAdm',
+    },
+  ];
+
   return (
     <SidebarProvider>
       <div className="flex w-full  font-geist">
@@ -32,10 +64,81 @@ export default function AdmUserManagement() {
                     </p>
                   </div>
                   <div>
+                    <Dialog>
+                      <DialogTrigger>
                     <Button variant="secondary" size="lg">
                       <PlusIcon />
-                      <p>Adicionar Administrador
+                          Adicionar Administrador
                     </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Adicionar Administrador</DialogTitle>
+                          <DialogDescription>
+                            Preencha os campos para cadastro de um novo
+                            administrador.
+                          </DialogDescription>
+                        </DialogHeader>
+                        <FieldGroup>
+                          <div className="grid grid-cols-2 gap-4">
+                            <Field>
+                              <Label htmlFor="name">
+                                Nome
+                                <span className="text-destructive">*</span>
+                              </Label>
+                              <Input required id="name"></Input>
+                            </Field>
+                            <Field>
+                              <Label htmlFor="surname">
+                                Sobrenome
+                                <span className="text-destructive">*</span>
+                              </Label>
+                              <Input required id="surname"></Input>
+                            </Field>
+                          </div>
+                          <Field>
+                            <Label htmlFor="email">
+                              Email
+                              <span className="text-destructive">*</span>
+                            </Label>
+                            <Input required id="email"></Input>
+                          </Field>
+                          <Field>
+                            <Label
+                              htmlFor="role"
+                              className="flex flex-col items-start"
+                            >
+                              <div className="flex gap-2">
+                                Cargo<span className="text-destructive">*</span>
+                              </div>
+                              <Select id="role" items={admRoles}>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Selecione um cargo" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectGroup>
+                                    {admRoles.map((role) => (
+                                      <SelectItem
+                                        key={role.value}
+                                        value={role.value}
+                                      >
+                                        {role.label}
+                                      </SelectItem>
+                                    ))}
+                                  </SelectGroup>
+                                </SelectContent>
+                              </Select>
+                            </Label>
+                          </Field>
+                        </FieldGroup>
+                        <DialogFooter>
+                          <Button variant="default">Cadastrar</Button>
+                          <DialogClose>
+                            <Button variant="outline">Cancelar</Button>
+                          </DialogClose>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
                 <Tabs>
