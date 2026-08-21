@@ -42,7 +42,7 @@ export default function AdmUserManagement() {
 
   return (
     <SidebarProvider>
-      <div className="flex w-full  font-geist">
+      <div className="flex w-full font-geist">
         <AppSidebar />
         <div className="flex flex-1 flex-col min-w-0 w-full h-full">
           <Header
@@ -66,10 +66,10 @@ export default function AdmUserManagement() {
                   <div>
                     <Dialog>
                       <DialogTrigger>
-                    <Button variant="secondary" size="lg">
-                      <PlusIcon />
+                        <Button variant="secondary" size="lg">
+                          <PlusIcon />
                           Adicionar Administrador
-                    </Button>
+                        </Button>
                       </DialogTrigger>
                       <DialogContent>
                         <DialogHeader>
@@ -104,31 +104,27 @@ export default function AdmUserManagement() {
                             <Input required id="email"></Input>
                           </Field>
                           <Field>
-                            <Label
-                              htmlFor="role"
-                              className="flex flex-col items-start"
-                            >
-                              <div className="flex gap-2">
-                                Cargo<span className="text-destructive">*</span>
-                              </div>
-                              <Select id="role" items={admRoles}>
-                                <SelectTrigger>
-                                  <SelectValue placeholder="Selecione um cargo" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                  <SelectGroup>
-                                    {admRoles.map((role) => (
-                                      <SelectItem
-                                        key={role.value}
-                                        value={role.value}
-                                      >
-                                        {role.label}
-                                      </SelectItem>
-                                    ))}
-                                  </SelectGroup>
-                                </SelectContent>
-                              </Select>
+                            <Label htmlFor="role">
+                              Cargo
+                              <span className="text-destructive">*</span>
                             </Label>
+                            <Select id="role" items={admRoles}>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Selecione um cargo" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectGroup>
+                                  {admRoles.map((role) => (
+                                    <SelectItem
+                                      key={role.value}
+                                      value={role.value}
+                                    >
+                                      {role.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectGroup>
+                              </SelectContent>
+                            </Select>
                           </Field>
                         </FieldGroup>
                         <DialogFooter>
