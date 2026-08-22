@@ -27,6 +27,7 @@ import {
   SelectItem,
   SelectGroup,
 } from '@/components/ui/select';
+import { useState } from 'react';
 
 export default function AdmUserManagement() {
   const admRoles = [
@@ -39,6 +40,8 @@ export default function AdmUserManagement() {
       value: 'masterAdm',
     },
   ];
+
+  const [openDialog, setOpenDialog] = useState(false);
 
   return (
     <SidebarProvider>
@@ -64,9 +67,16 @@ export default function AdmUserManagement() {
                     </p>
                   </div>
                   <div>
-                    <Dialog>
+                    <Dialog
+                      open={openDialog}
+                      onOpenChange={(open) => setOpenDialog(open)}
+                    >
                       <DialogTrigger>
-                        <Button variant="secondary" size="lg">
+                        <Button
+                          onClick={() => setOpenDialog(true)}
+                          variant="secondary"
+                          size="lg"
+                        >
                           <PlusIcon />
                           Adicionar Administrador
                         </Button>
@@ -85,62 +95,62 @@ export default function AdmUserManagement() {
                             setOpenDialog(false);
                           }}
                         >
-                        <FieldGroup>
-                          <div className="grid grid-cols-2 gap-4">
+                          <FieldGroup>
+                            <div className="grid grid-cols-2 gap-4">
+                              <Field>
+                                <Label htmlFor="name">
+                                  Nome
+                                  <span className="text-destructive">*</span>
+                                </Label>
+                                <Input required id="name"></Input>
+                              </Field>
+                              <Field>
+                                <Label htmlFor="surname">
+                                  Sobrenome
+                                  <span className="text-destructive">*</span>
+                                </Label>
+                                <Input required id="surname"></Input>
+                              </Field>
+                            </div>
                             <Field>
-                              <Label htmlFor="name">
-                                Nome
+                              <Label htmlFor="email">
+                                Email
                                 <span className="text-destructive">*</span>
                               </Label>
-                              <Input required id="name"></Input>
+                              <Input required id="email"></Input>
                             </Field>
                             <Field>
-                              <Label htmlFor="surname">
-                                Sobrenome
+                              <Label htmlFor="role">
+                                Cargo
                                 <span className="text-destructive">*</span>
                               </Label>
-                              <Input required id="surname"></Input>
-                            </Field>
-                          </div>
-                          <Field>
-                            <Label htmlFor="email">
-                              Email
-                              <span className="text-destructive">*</span>
-                            </Label>
-                            <Input required id="email"></Input>
-                          </Field>
-                          <Field>
-                            <Label htmlFor="role">
-                              Cargo
-                              <span className="text-destructive">*</span>
-                            </Label>
                               <Select required id="role" items={admRoles}>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Selecione um cargo" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectGroup>
-                                  {admRoles.map((role) => (
-                                    <SelectItem
-                                      key={role.value}
-                                      value={role.value}
-                                    >
-                                      {role.label}
-                                    </SelectItem>
-                                  ))}
-                                </SelectGroup>
-                              </SelectContent>
-                            </Select>
-                          </Field>
-                        </FieldGroup>
-                        <DialogFooter>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Selecione um cargo" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectGroup>
+                                    {admRoles.map((role) => (
+                                      <SelectItem
+                                        key={role.value}
+                                        value={role.value}
+                                      >
+                                        {role.label}
+                                      </SelectItem>
+                                    ))}
+                                  </SelectGroup>
+                                </SelectContent>
+                              </Select>
+                            </Field>
+                          </FieldGroup>
+                          <DialogFooter>
                             <Button type="submit" variant="default">
                               Cadastrar
                             </Button>
-                          <DialogClose>
-                            <Button variant="outline">Cancelar</Button>
-                          </DialogClose>
-                        </DialogFooter>
+                            <DialogClose>
+                              <Button variant="outline">Cancelar</Button>
+                            </DialogClose>
+                          </DialogFooter>
                         </form>
                       </DialogContent>
                     </Dialog>
