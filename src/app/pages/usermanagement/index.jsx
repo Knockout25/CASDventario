@@ -79,6 +79,12 @@ export default function AdmUserManagement() {
                             administrador.
                           </DialogDescription>
                         </DialogHeader>
+                        <form
+                          onSubmit={(event) => {
+                            event.preventDefault();
+                            setOpenDialog(false);
+                          }}
+                        >
                         <FieldGroup>
                           <div className="grid grid-cols-2 gap-4">
                             <Field>
@@ -108,7 +114,7 @@ export default function AdmUserManagement() {
                               Cargo
                               <span className="text-destructive">*</span>
                             </Label>
-                            <Select id="role" items={admRoles}>
+                              <Select required id="role" items={admRoles}>
                               <SelectTrigger>
                                 <SelectValue placeholder="Selecione um cargo" />
                               </SelectTrigger>
@@ -128,11 +134,14 @@ export default function AdmUserManagement() {
                           </Field>
                         </FieldGroup>
                         <DialogFooter>
-                          <Button variant="default">Cadastrar</Button>
+                            <Button type="submit" variant="default">
+                              Cadastrar
+                            </Button>
                           <DialogClose>
                             <Button variant="outline">Cancelar</Button>
                           </DialogClose>
                         </DialogFooter>
+                        </form>
                       </DialogContent>
                     </Dialog>
                   </div>
