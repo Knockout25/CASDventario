@@ -32,7 +32,7 @@ const data = {
       icon: CirclesFourIcon,
     },
     {
-      title: 'Usuários',
+      title: 'Administradores',
       url: '/usermanagement',
       icon: UsersIcon,
     },

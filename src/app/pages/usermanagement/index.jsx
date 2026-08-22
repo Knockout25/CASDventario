@@ -46,7 +46,7 @@ export default function AdmUserManagement() {
         <AppSidebar />
         <div className="flex flex-1 flex-col min-w-0 w-full h-full">
           <Header
-            headerTitle={'Usuários'}
+            headerTitle={'Administradores'}
             AccountName={'Administrador'}
             AccountPosition={'CEO'}
           />
@@ -56,11 +56,11 @@ export default function AdmUserManagement() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-xl">
-                      Gerenciamento de Usuários
+                      Gerenciamento de Administradores
                     </h3>
                     <p className="text-sm line text-muted-foreground">
-                      Administre e supervisione contas e privilégios de usuários
-                      no sistema.
+                      Administre e supervisione contas e privilégios de
+                      administradores no sistema.
                     </p>
                   </div>
                   <div>
@@ -142,13 +142,13 @@ export default function AdmUserManagement() {
                     <TabsTrigger value="administrators">
                       Administradores
                     </TabsTrigger>
-                    <TabsTrigger value="students">Alunos</TabsTrigger>
+                    <TabsTrigger value="administratorsLog">Logs</TabsTrigger>
                   </TabsList>
                   <TabsContent value="administrators">
                     <TableSection title="Administradores" />
                   </TabsContent>
-                  <TabsContent value="students">
-                    <TableSection title="Alunos" />
+                  <TabsContent value="administratorsLog">
+                    <TableSection title="Logs" />
                   </TabsContent>
                 </Tabs>
               </div>
