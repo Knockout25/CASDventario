@@ -9,11 +9,11 @@ import {
 } from '@/components/ui/sidebar';
 import {
   CirclesFourIcon,
-  UsersIcon,
+  UserIcon,
   PackageIcon,
   BookIcon,
   LaptopIcon,
-  UserIcon,
+  UserGearIcon,
   StudentIcon,
   BellIcon,
   GearIcon,
@@ -35,7 +35,7 @@ const data = {
     {
       title: 'Administradores',
       url: '/usermanagement',
-      icon: UsersIcon,
+      icon: UserGearIcon,
     },
     {
       title: 'Alunos',
