@@ -1,10 +1,8 @@
 import Header from '../../../components/ui/header';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import TableSection from '@/components/table-section';
 import AddAdminDialog from './components/add-admin-dialog';
+import AdmManagementTabs from './components/adm-management-tabs';
 
 export default function AdmUserManagement() {
   return (
@@ -34,20 +32,7 @@ export default function AdmUserManagement() {
                     <AddAdminDialog />
                   </div>
                 </div>
-                <Tabs>
-                  <TabsList variant="line">
-                    <TabsTrigger value="administrators">
-                      Administradores
-                    </TabsTrigger>
-                    <TabsTrigger value="administratorsLog">Logs</TabsTrigger>
-                  </TabsList>
-                  <TabsContent value="administrators">
-                    <TableSection title="Administradores" />
-                  </TabsContent>
-                  <TabsContent value="administratorsLog">
-                    <TableSection title="Logs" />
-                  </TabsContent>
-                </Tabs>
+                <AdmManagementTabs />
               </div>
             </div>
           </main>
