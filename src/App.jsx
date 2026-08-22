@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignIn from './app/pages/sign-in/index';
 import SignUp from './app/pages/sign-up/index';
 import ForgotPassword from './app/pages/forgotpassword';
-import AdmUserManagement from './app/pages/usermanagement';
+import AdmUserManagement from './app/pages/admmanagement';
 import { ThemeProvider } from './components/theme-provider';
 
 export default function App() {
