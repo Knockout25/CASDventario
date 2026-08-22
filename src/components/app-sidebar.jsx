@@ -14,6 +14,7 @@ import {
   BookIcon,
   LaptopIcon,
   UserIcon,
+  StudentIcon,
   BellIcon,
   GearIcon,
 } from '@phosphor-icons/react';
@@ -35,6 +36,11 @@ const data = {
       title: 'Administradores',
       url: '/usermanagement',
       icon: UsersIcon,
+    },
+    {
+      title: 'Alunos',
+      url: '/alunos',
+      icon: StudentIcon,
     },
     {
       title: 'Remessas',
