@@ -4,6 +4,7 @@ import SignUp from './app/pages/sign-up/index';
 import ForgotPassword from './app/pages/forgotpassword';
 import AdmUserManagement from './app/pages/admmanagement';
 import { ThemeProvider } from './components/theme-provider';
+import { Toaster } from './components/ui/toast';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>
+      <Toaster />
     </ThemeProvider>
   );
 }

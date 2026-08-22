@@ -24,6 +24,7 @@ import { Field, FieldGroup } from '@/components/ui/field';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { toast } from '@/components/ui/toast';
 
 export default function AddAdminDialog() {
   const ADM_ROLES = [
@@ -40,6 +41,11 @@ export default function AddAdminDialog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    toast.add({
+      type: 'success',
+      description: 'Administrador adicionado com sucesso',
+    });
     setOpenDialog(false);
   };
 
