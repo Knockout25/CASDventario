@@ -36,7 +36,7 @@ export default function TableSection({ title }) {
         <div className="flex space-x-2 transition-all ease-in-out">
           <InputGroup>
             <InputGroupInput
-              placeholder="Buscar usuário..."
+              placeholder={`Buscar ${title.toLowerCase()}...`}
               value={globalFilter}
               onChange={(e) => setGlobalFilter(e.target.value)}
             />
